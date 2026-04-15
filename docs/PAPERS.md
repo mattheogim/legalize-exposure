@@ -2,6 +2,13 @@
 
 > **RULE: Read the papers marked 🔴 before building any new module.**
 > Section-by-section math notes are in `docs/papers/`.
+>
+> **Additional analysis files:**
+> - [09 — Validation framework](papers/09-validation-framework.md) (4-tier pyramid, what top journals require)
+> - [10 — Blind spots](papers/10-blind-spots-unasked-questions.md) (SEC liability, moat, customer validation, scale, ethics)
+> - [11 — Practical studies](papers/11-practical-studies-we-can-do.md) (9 studies replicable with our data)
+> - [12 — ICSE rejection reasons](papers/12-icse-rejection-reasons.md) (evaluation gaps, novelty, scope)
+> - [13 — Attack/defense report](papers/13-attack-defense-report.md) (10 attacks at 8/10 contentiousness)
 
 ---
 
