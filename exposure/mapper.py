@@ -279,11 +279,24 @@ class ExposureMapper:
             valid_from=edge_valid_from,
         ))
 
-        # ── Step 5: Industry matching (LF1 + LF2 merge) ─────────────
+        # ── Step 5: Industry matching (LF1 + LF2 + LF3+ merge) ──────
         industry_matches: dict[str, IndustryMatch] = {}
 
         # LF1: Agency → Industry
-        for match in self.agency_lookup.match(agency_slug):
+        agency_matches = list(self.agency_lookup.match(agency_slug))
+        for match in agency_matches:
+            key = match.naics_code
+            if key not in industry_matches or match.confidence > industry_matches[key].confidence:
+                industry_matches[key] = match
+
+        # LF3+: Title keyword classification (refines LF1 results)
+        # Narrows over-broad agency mappings and adds specific industries.
+        # Example: DOT → all transport, but "airworthiness" → aviation only.
+        # [src:armstrong-2025] Simple dictionary ≈ GPT for regulatory exposure.
+        from .text_classifier import refine_mapping
+        refined = refine_mapping(agency_matches, title)
+        industry_matches.clear()
+        for match in refined:
             key = match.naics_code
             if key not in industry_matches or match.confidence > industry_matches[key].confidence:
                 industry_matches[key] = match
