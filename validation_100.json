@@ -1,0 +1,2430 @@
+[
+  {
+    "document_number": "2026-06281",
+    "title": "Rescission of OCC Guidelines Establishing Standards for Recovery Planning by Certain Large Insured National Banks, Insured Federal Savings Associations, and Insured Federal Branches",
+    "doc_type": "Rule",
+    "agency": "treasury-department",
+    "publication_date": "2026-04-01",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06281/rescission-of-occ-guidelines-establishing-standards-for-recovery-planning-by-certain-large-insured"
+  },
+  {
+    "document_number": "2026-06489",
+    "title": "GENIUS Act Broad-Based Principles for Determining Whether a State-Level Regulatory Regime Is Substantially Similar to the Federal Regulatory Framework",
+    "doc_type": "Proposed Rule",
+    "agency": "treasury-department",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06489/genius-act-broad-based-principles-for-determining-whether-a-state-level-regulatory-regime-is"
+  },
+  {
+    "document_number": "2026-06762",
+    "title": "Amendment of Class B Airspace Description; Denver International Airport, CO",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-08",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.5,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/08/2026-06762/amendment-of-class-b-airspace-description-denver-international-airport-co"
+  },
+  {
+    "document_number": "2026-06599",
+    "title": "Airworthiness Directives; Baykar Piaggio Aerospace S.p.A. (Type Certificate Previously Held by Piaggio Aviation S.p.A.) Airplanes",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06599/airworthiness-directives-baykar-piaggio-aerospace-spa-type-certificate-previously-held-by-piaggio"
+  },
+  {
+    "document_number": "2026-06374",
+    "title": "List of Approved Spent Fuel Storage Casks: Holtec International HI-STORM UMAX Canister Storage System, Certificate of Compliance No. 1040, Amendment No. 5",
+    "doc_type": "Proposed Rule",
+    "agency": "nuclear-regulatory-commission",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "2211",
+      "221",
+      "562",
+      "211"
+    ],
+    "etfs": [
+      "ICLN",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XLE",
+      "XLI",
+      "XLU",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06374/list-of-approved-spent-fuel-storage-casks-holtec-international-hi-storm-umax-canister-storage-system"
+  },
+  {
+    "document_number": "2026-06048",
+    "title": "Risk-Informed, Technology-Inclusive Regulatory Framework for Advanced Reactors",
+    "doc_type": "Rule",
+    "agency": "nuclear-regulatory-commission",
+    "publication_date": "2026-03-30",
+    "significant": true,
+    "industries": [
+      "2211",
+      "221",
+      "562",
+      "211"
+    ],
+    "etfs": [
+      "ICLN",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XLE",
+      "XLI",
+      "XLU",
+      "XOP"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06048/risk-informed-technology-inclusive-regulatory-framework-for-advanced-reactors"
+  },
+  {
+    "document_number": "2026-06955",
+    "title": "Import Regulations for Horses; Pre-Export Examination",
+    "doc_type": "Rule",
+    "agency": "agriculture-department",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "112",
+      "311",
+      "114"
+    ],
+    "etfs": [
+      "MOO",
+      "XLP"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06955/import-regulations-for-horses-pre-export-examination"
+  },
+  {
+    "document_number": "2026-06173",
+    "title": "Single Family Housing Guaranteed Loan Program-Income Producing Accessory Dwelling Unit (ADU) Provisions",
+    "doc_type": "Proposed Rule",
+    "agency": "agriculture-department",
+    "publication_date": "2026-03-31",
+    "significant": true,
+    "industries": [
+      "111",
+      "112",
+      "311"
+    ],
+    "etfs": [
+      "MOO",
+      "XLP"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06173/single-family-housing-guaranteed-loan-program-income-producing-accessory-dwelling-unit-adu"
+  },
+  {
+    "document_number": "2026-07087",
+    "title": "Final Priority and Definitions-Secretary's Supplemental Priority and Definitions on Advancing Artificial Intelligence in Education",
+    "doc_type": "Rule",
+    "agency": "education-department",
+    "publication_date": "2026-04-13",
+    "significant": false,
+    "industries": [
+      "611"
+    ],
+    "etfs": [
+      "XLY"
+    ],
+    "contamination_score": 0.5833333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/13/2026-07087/final-priority-and-definitions-secretarys-supplemental-priority-and-definitions-on-advancing"
+  },
+  {
+    "document_number": "2026-06438",
+    "title": "Proposed Waivers and Extensions of the Project Period With Funding for the American Indian Vocational Rehabilitation Services Program and the American Indian Vocational Rehabilitation Training and Technical Assistance Center",
+    "doc_type": "Proposed Rule",
+    "agency": "education-department",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "611"
+    ],
+    "etfs": [
+      "XLY"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06438/proposed-waivers-and-extensions-of-the-project-period-with-funding-for-the-american-indian"
+  },
+  {
+    "document_number": "2026-06937",
+    "title": "Air Plan Approval and Air Quality Designation; Ohio; Attainment Plan and Redesignation of the Canton Area to Attainment of the 2008 Lead Standard",
+    "doc_type": "Proposed Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06937/air-plan-approval-and-air-quality-designation-ohio-attainment-plan-and-redesignation-of-the-canton"
+  },
+  {
+    "document_number": "2026-06940",
+    "title": "Air Plan Approval; Ohio; Source-Specific Non-CTG RACT for Ohio",
+    "doc_type": "Proposed Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06940/air-plan-approval-ohio-source-specific-non-ctg-ract-for-ohio"
+  },
+  {
+    "document_number": "2026-06196",
+    "title": "General Reclamation Requirements",
+    "doc_type": "Rule",
+    "agency": "interior-department",
+    "publication_date": "2026-03-31",
+    "significant": false,
+    "industries": [
+      "212"
+    ],
+    "etfs": [
+      "LIT",
+      "XLB",
+      "XME"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06196/general-reclamation-requirements"
+  },
+  {
+    "document_number": "2026-05976",
+    "title": "Marine Mammals; Incidental Take of Northern Sea Otters During Specified Activities; Seward, Sitka, and Kodiak, Alaska",
+    "doc_type": "Rule",
+    "agency": "interior-department",
+    "publication_date": "2026-03-27",
+    "significant": false,
+    "industries": [
+      "114",
+      "112"
+    ],
+    "etfs": [
+      "MOO"
+    ],
+    "contamination_score": 0.08333333333333331,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/27/2026-05976/marine-mammals-incidental-take-of-northern-sea-otters-during-specified-activities-seward-sitka-and"
+  },
+  {
+    "document_number": "2026-06996",
+    "title": "Collection of Checks and Other Items by Federal Reserve Banks and Funds Transfers Through the Fedwire Funds Service and the FedNow Service; Regulation J",
+    "doc_type": "Proposed Rule",
+    "agency": "federal-reserve-system",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06996/collection-of-checks-and-other-items-by-federal-reserve-banks-and-funds-transfers-through-the"
+  },
+  {
+    "document_number": "2026-05961",
+    "title": "Regulatory Capital Rule (Regulation Q): Risk-Based Capital Surcharges for Global Systemically Important Bank Holding Companies; Systemic Risk Report (FR Y-15)",
+    "doc_type": "Proposed Rule",
+    "agency": "federal-reserve-system",
+    "publication_date": "2026-03-27",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.08333333333333331,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/27/2026-05961/regulatory-capital-rule-regulation-q-risk-based-capital-surcharges-for-global-systemically-important"
+  },
+  {
+    "document_number": "2026-06776",
+    "title": "Fisheries of the Northeastern United States; Summer Flounder Fishery; Quota Transfer From North Carolina to New Jersey",
+    "doc_type": "Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-04-08",
+    "significant": false,
+    "industries": [
+      "114",
+      "112"
+    ],
+    "etfs": [
+      "MOO"
+    ],
+    "contamination_score": 0.5,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/08/2026-06776/fisheries-of-the-northeastern-united-states-summer-flounder-fishery-quota-transfer-from-north"
+  },
+  {
+    "document_number": "2026-06382",
+    "title": "Commerce Acquisition Regulation; Minor Amendments",
+    "doc_type": "Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "3364",
+      "5415",
+      "334",
+      "928"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "ICLN",
+      "IHI",
+      "ITA",
+      "IYZ",
+      "JETS",
+      "LIT",
+      "SMH",
+      "TAN",
+      "XLI",
+      "XLK"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06382/commerce-acquisition-regulation-minor-amendments"
+  },
+  {
+    "document_number": "2026-06239",
+    "title": "Review of the Commission's Rules Governing the 896-901/935-940 MHz Band",
+    "doc_type": "Rule",
+    "agency": "federal-communications-commission",
+    "publication_date": "2026-03-31",
+    "significant": false,
+    "industries": [
+      "517",
+      "515",
+      "518"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "IYZ",
+      "XLC",
+      "XLK"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06239/review-of-the-commissions-rules-governing-the-896-901935-940-mhz-band"
+  },
+  {
+    "document_number": "2026-06863",
+    "title": "Modernizing Suspension and Debarment Rules",
+    "doc_type": "Proposed Rule",
+    "agency": "federal-communications-commission",
+    "publication_date": "2026-04-09",
+    "significant": false,
+    "industries": [
+      "517",
+      "515",
+      "518"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "IYZ",
+      "XLC",
+      "XLK"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06863/modernizing-suspension-and-debarment-rules"
+  },
+  {
+    "document_number": "2026-06974",
+    "title": "GENIUS Act Requirements and Standards for FDIC-Supervised Permitted Payment Stablecoin Issuers and Insured Depository Institutions",
+    "doc_type": "Proposed Rule",
+    "agency": "federal-deposit-insurance-corporation",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "522",
+      "5223",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06974/genius-act-requirements-and-standards-for-fdic-supervised-permitted-payment-stablecoin-issuers-and"
+  },
+  {
+    "document_number": "2026-06949",
+    "title": "Privacy Act of 1974; Implementation",
+    "doc_type": "Proposed Rule",
+    "agency": "defense-department",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "3364",
+      "928",
+      "334",
+      "5415"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "ICLN",
+      "IHI",
+      "ITA",
+      "IYZ",
+      "JETS",
+      "LIT",
+      "SMH",
+      "TAN",
+      "XLI",
+      "XLK"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06949/privacy-act-of-1974-implementation"
+  },
+  {
+    "document_number": "2026-06757",
+    "title": "Chartering and Field of Membership",
+    "doc_type": "Proposed Rule",
+    "agency": "national-credit-union-administration",
+    "publication_date": "2026-04-08",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.5,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/08/2026-06757/chartering-and-field-of-membership"
+  },
+  {
+    "document_number": "2026-06064",
+    "title": "Microbiology Devices; Reclassification of Mycobacterium Tuberculosis Cell-Mediated Immunity Tests and Immune Response Enzyme-Linked Immunospot Tests",
+    "doc_type": "Proposed Rule",
+    "agency": "health-and-human-services-department",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "3254",
+      "3391",
+      "311"
+    ],
+    "etfs": [
+      "IBB",
+      "IHI",
+      "LIT",
+      "MOO",
+      "PHO",
+      "XBI",
+      "XLB",
+      "XLP",
+      "XLV"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06064/microbiology-devices-reclassification-of-mycobacterium-tuberculosis-cell-mediated-immunity-tests-and"
+  },
+  {
+    "document_number": "2026-06604",
+    "title": "Medicare Program; FY 2027 Hospice Wage Index and Payment Rate Update and Hospice Quality Reporting Program Requirements",
+    "doc_type": "Proposed Rule",
+    "agency": "health-and-human-services-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "621",
+      "622",
+      "524"
+    ],
+    "etfs": [
+      "IBB",
+      "IHF",
+      "KIE",
+      "KRE",
+      "XLF",
+      "XLV"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06604/medicare-program-fy-2027-hospice-wage-index-and-payment-rate-update-and-hospice-quality-reporting"
+  },
+  {
+    "document_number": "2026-06619",
+    "title": "Special Local Regulation; 4th of July Fireworks, East River and Upper New York Bay, Manhattan, Queens, and Brooklyn, NY",
+    "doc_type": "Proposed Rule",
+    "agency": "homeland-security-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "483"
+    ],
+    "etfs": [
+      "IYT"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06619/special-local-regulation-4th-of-july-fireworks-east-river-and-upper-new-york-bay-manhattan-queens"
+  },
+  {
+    "document_number": "2026-06578",
+    "title": "Walking-Working Surfaces",
+    "doc_type": "Proposed Rule",
+    "agency": "labor-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "236",
+      "331"
+    ],
+    "etfs": [
+      "LIT",
+      "XHB",
+      "XLB",
+      "XLI",
+      "XLRE",
+      "XME"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06578/walking-working-surfaces"
+  },
+  {
+    "document_number": "2026-06178",
+    "title": "Fiduciary Duties in Selecting Designated Investment Alternatives",
+    "doc_type": "Proposed Rule",
+    "agency": "labor-department",
+    "publication_date": "2026-03-31",
+    "significant": false,
+    "industries": [
+      "236",
+      "331"
+    ],
+    "etfs": [
+      "LIT",
+      "XHB",
+      "XLB",
+      "XLI",
+      "XLRE",
+      "XME"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06178/fiduciary-duties-in-selecting-designated-investment-alternatives"
+  },
+  {
+    "document_number": "2026-06556",
+    "title": "Allocation of Assets in Single-Employer Plans; Interest Assumptions for Valuing Benefits",
+    "doc_type": "Rule",
+    "agency": "pension-benefit-guaranty-corporation",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "236",
+      "331"
+    ],
+    "etfs": [
+      "LIT",
+      "XHB",
+      "XLB",
+      "XLI",
+      "XLRE",
+      "XME"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06556/allocation-of-assets-in-single-employer-plans-interest-assumptions-for-valuing-benefits"
+  },
+  {
+    "document_number": "2026-06553",
+    "title": "General Provisions",
+    "doc_type": "Rule",
+    "agency": "farm-credit-administration",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06553/general-provisions"
+  },
+  {
+    "document_number": "2026-06523",
+    "title": "Designation of P2P Methyl Glycidic Acid as a List I Chemical",
+    "doc_type": "Rule",
+    "agency": "justice-department",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "3254",
+      "3391",
+      "311"
+    ],
+    "etfs": [
+      "IBB",
+      "IHI",
+      "LIT",
+      "MOO",
+      "PHO",
+      "XBI",
+      "XLB",
+      "XLP",
+      "XLV"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06523/designation-of-p2p-methyl-glycidic-acid-as-a-list-i-chemical"
+  },
+  {
+    "document_number": "C1-2026-02288",
+    "title": "Registering Emergency Medical Services Agencies Under the Protecting Patient Access to Emergency Medications Act of 2017",
+    "doc_type": "Rule",
+    "agency": "justice-department",
+    "publication_date": "2026-04-01",
+    "significant": true,
+    "industries": [
+      "3254",
+      "3391",
+      "311"
+    ],
+    "etfs": [
+      "IBB",
+      "IHI",
+      "LIT",
+      "MOO",
+      "PHO",
+      "XBI",
+      "XLB",
+      "XLP",
+      "XLV"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/C1-2026-02288/registering-emergency-medical-services-agencies-under-the-protecting-patient-access-to-emergency"
+  },
+  {
+    "document_number": "2026-06306",
+    "title": "Safety Standard for Gates and Enclosures",
+    "doc_type": "Rule",
+    "agency": "consumer-product-safety-commission",
+    "publication_date": "2026-04-01",
+    "significant": false,
+    "industries": [
+      "454",
+      "518",
+      "522"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "IAI",
+      "IYZ",
+      "KIE",
+      "KRE",
+      "XLC",
+      "XLF",
+      "XLK",
+      "XLY",
+      "XRT"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06306/safety-standard-for-gates-and-enclosures"
+  },
+  {
+    "document_number": "2026-06080",
+    "title": "Safety Standard for Portable Hook-On Chairs",
+    "doc_type": "Rule",
+    "agency": "consumer-product-safety-commission",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "454",
+      "518",
+      "522"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "IAI",
+      "IYZ",
+      "KIE",
+      "KRE",
+      "XLC",
+      "XLF",
+      "XLK",
+      "XLY",
+      "XRT"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06080/safety-standard-for-portable-hook-on-chairs"
+  },
+  {
+    "document_number": "2026-06229",
+    "title": "Performance-Based Investment Advisory Fees",
+    "doc_type": "Proposed Rule",
+    "agency": "securities-and-exchange-commission",
+    "publication_date": "2026-03-31",
+    "significant": false,
+    "industries": [
+      "523",
+      "522",
+      "525"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF",
+      "XLRE"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06229/performance-based-investment-advisory-fees"
+  },
+  {
+    "document_number": "2026-06195",
+    "title": "Implementing the Freedom of Information Act and Privacy Act",
+    "doc_type": "Proposed Rule",
+    "agency": "office-of-the-national-cyber-director",
+    "publication_date": "2026-03-31",
+    "significant": false,
+    "industries": [
+      "3364",
+      "928",
+      "334",
+      "5415"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "ICLN",
+      "IHI",
+      "ITA",
+      "IYZ",
+      "JETS",
+      "LIT",
+      "SMH",
+      "TAN",
+      "XLI",
+      "XLK"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06195/implementing-the-freedom-of-information-act-and-privacy-act"
+  },
+  {
+    "document_number": "2026-06177",
+    "title": "Energy Conservation Program: Energy Conservation Standards for Fluorescent Lamp Ballasts",
+    "doc_type": "Proposed Rule",
+    "agency": "energy-department",
+    "publication_date": "2026-03-31",
+    "significant": false,
+    "industries": [
+      "221",
+      "211"
+    ],
+    "etfs": [
+      "ICLN",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XLE",
+      "XLU",
+      "XOP"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06177/energy-conservation-program-energy-conservation-standards-for-fluorescent-lamp-ballasts"
+  },
+  {
+    "document_number": "2026-06114",
+    "title": "Authority To Require Supervision and Regulation of Certain Nonbank Financial Companies",
+    "doc_type": "Proposed Rule",
+    "agency": "financial-stability-oversight-council",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06114/authority-to-require-supervision-and-regulation-of-certain-nonbank-financial-companies"
+  },
+  {
+    "document_number": "2026-06864",
+    "title": "Modernizing Suspension and Debarment Rules",
+    "doc_type": "Rule",
+    "agency": "federal-communications-commission",
+    "publication_date": "2026-04-09",
+    "significant": false,
+    "industries": [
+      "517",
+      "515",
+      "518"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "IYZ",
+      "XLC",
+      "XLK"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06864/modernizing-suspension-and-debarment-rules"
+  },
+  {
+    "document_number": "2026-06851",
+    "title": "Extension of Authorized Integrated Circuit (IC) Designer Status and Application Deadline To Become an Approved IC Designer",
+    "doc_type": "Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-04-09",
+    "significant": false,
+    "industries": [
+      "334",
+      "331",
+      "517",
+      "518"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "ICLN",
+      "IHI",
+      "ITA",
+      "IYZ",
+      "LIT",
+      "SMH",
+      "TAN",
+      "XLB",
+      "XLC",
+      "XLK",
+      "XME"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06851/extension-of-authorized-integrated-circuit-ic-designer-status-and-application-deadline-to-become-an"
+  },
+  {
+    "document_number": "2026-06537",
+    "title": "National Environmental Policy Act",
+    "doc_type": "Rule",
+    "agency": "agriculture-department",
+    "publication_date": "2026-04-03",
+    "significant": true,
+    "industries": [
+      "111",
+      "112",
+      "311"
+    ],
+    "etfs": [
+      "MOO",
+      "XLP"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06537/national-environmental-policy-act"
+  },
+  {
+    "document_number": "2026-06102",
+    "title": "Fisheries of the Northeastern United States; Mid-Atlantic Blueline Tilefish and Golden Tilefish Fisheries; 2026 Specifications",
+    "doc_type": "Proposed Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "114",
+      "112"
+    ],
+    "etfs": [
+      "MOO"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06102/fisheries-of-the-northeastern-united-states-mid-atlantic-blueline-tilefish-and-golden-tilefish"
+  },
+  {
+    "document_number": "2026-06621",
+    "title": "Airworthiness Directives; Airbus Helicopters",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06621/airworthiness-directives-airbus-helicopters"
+  },
+  {
+    "document_number": "2026-06866",
+    "title": "Review of Foreign Ownership Policies for Broadcast, Common Carrier and Aeronautical Radio Licensees",
+    "doc_type": "Rule",
+    "agency": "federal-communications-commission",
+    "publication_date": "2026-04-09",
+    "significant": false,
+    "industries": [
+      "517",
+      "515",
+      "518"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "IYZ",
+      "XLC",
+      "XLK"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06866/review-of-foreign-ownership-policies-for-broadcast-common-carrier-and-aeronautical-radio-licensees"
+  },
+  {
+    "document_number": "2026-06254",
+    "title": "Federal Motor Vehicle Safety Standards; Modernization of FMVSS No. 110 To Accommodate ADS-Equipped Vehicles",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-01",
+    "significant": false,
+    "industries": [
+      "481",
+      "482",
+      "484",
+      "3361"
+    ],
+    "etfs": [
+      "IYT",
+      "JETS",
+      "LIT",
+      "XLI",
+      "XLY"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06254/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-110-to-accommodate-ads-equipped"
+  },
+  {
+    "document_number": "2026-06067",
+    "title": "Airworthiness Directives; The Boeing Company Airplanes",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06067/airworthiness-directives-the-boeing-company-airplanes"
+  },
+  {
+    "document_number": "2026-05876",
+    "title": "Hazardous Waste Management System; Identification and Listing of Hazardous Waste",
+    "doc_type": "Proposed Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-03-26",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.0,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/26/2026-05876/hazardous-waste-management-system-identification-and-listing-of-hazardous-waste"
+  },
+  {
+    "document_number": "2026-06465",
+    "title": "Airworthiness Directives; Airbus Canada Limited Partnership (Type Certificate Previously Held by C Series Aircraft Limited Partnership (CSALP); Bombardier, Inc.) Airplanes",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06465/airworthiness-directives-airbus-canada-limited-partnership-type-certificate-previously-held-by-c"
+  },
+  {
+    "document_number": "2026-06066",
+    "title": "Reporting Deadline Extension for the Health and Safety Data Reporting Rule Under Toxic Substance Control Act (TSCA) Section 8(d)",
+    "doc_type": "Proposed Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06066/reporting-deadline-extension-for-the-health-and-safety-data-reporting-rule-under-toxic-substance"
+  },
+  {
+    "document_number": "2026-07088",
+    "title": "Delegations of Authority",
+    "doc_type": "Rule",
+    "agency": "agriculture-department",
+    "publication_date": "2026-04-13",
+    "significant": false,
+    "industries": [
+      "111",
+      "112",
+      "311"
+    ],
+    "etfs": [
+      "MOO",
+      "XLP"
+    ],
+    "contamination_score": 0.5833333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/13/2026-07088/delegations-of-authority"
+  },
+  {
+    "document_number": "2026-06622",
+    "title": "Airworthiness Directives; Airbus Helicopters",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06622/airworthiness-directives-airbus-helicopters"
+  },
+  {
+    "document_number": "2026-06295",
+    "title": "Filing of Color Additive Petition From the International Association of Color Manufacturers; Request To Amend the Color Additive Regulations To Remove the Solvents Methylene Chloride, Trichloroethylene, and Ethylene Dichloride",
+    "doc_type": "Proposed Rule",
+    "agency": "health-and-human-services-department",
+    "publication_date": "2026-04-01",
+    "significant": false,
+    "industries": [
+      "3254",
+      "3391",
+      "311"
+    ],
+    "etfs": [
+      "IBB",
+      "IHI",
+      "LIT",
+      "MOO",
+      "PHO",
+      "XBI",
+      "XLB",
+      "XLP",
+      "XLV"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06295/filing-of-color-additive-petition-from-the-international-association-of-color-manufacturers-request"
+  },
+  {
+    "document_number": "2026-07015",
+    "title": "Notice of Request for Comment on the Part 141 Modernization Industry Recommendations Report",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-07015/notice-of-request-for-comment-on-the-part-141-modernization-industry-recommendations-report"
+  },
+  {
+    "document_number": "2026-06628",
+    "title": "Airworthiness Directives; Airbus Canada Limited Partnership (Type Certificate Previously Held by C Series Aircraft Limited Partnership (CSALP); Bombardier, Inc.) Airplanes",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06628/airworthiness-directives-airbus-canada-limited-partnership-type-certificate-previously-held-by-c"
+  },
+  {
+    "document_number": "2026-06085",
+    "title": "Airworthiness Directives; Airbus SAS Airplanes",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06085/airworthiness-directives-airbus-sas-airplanes"
+  },
+  {
+    "document_number": "2026-06404",
+    "title": "Lead-Based Paint Poisoning Prevention in Certain Residential Structures",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06404/lead-based-paint-poisoning-prevention-in-certain-residential-structures"
+  },
+  {
+    "document_number": "2026-06392",
+    "title": "Reef Fish Fishery of the Gulf of America; Amendment 62",
+    "doc_type": "Proposed Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "114",
+      "112"
+    ],
+    "etfs": [
+      "MOO"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06392/reef-fish-fishery-of-the-gulf-of-america-amendment-62"
+  },
+  {
+    "document_number": "2026-06070",
+    "title": "Marketable Treasury Securities Redemption Operations",
+    "doc_type": "Rule",
+    "agency": "treasury-department",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "522",
+      "523",
+      "525"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF",
+      "XLRE"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06070/marketable-treasury-securities-redemption-operations"
+  },
+  {
+    "document_number": "2026-07052",
+    "title": "Airworthiness Directives; Airbus SAS Airplanes",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-13",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.5833333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/13/2026-07052/airworthiness-directives-airbus-sas-airplanes"
+  },
+  {
+    "document_number": "2026-06304",
+    "title": "National Emission Standards for Hazardous Air Pollutants: Chemical Manufacturing Area Sources Technology Review",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-01",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06304/national-emission-standards-for-hazardous-air-pollutants-chemical-manufacturing-area-sources"
+  },
+  {
+    "document_number": "2026-06832",
+    "title": "Air Plan Approval; Missouri; Revisions to Existing Rule 10 CSR 10-5.570; Control of Sulfur Emissions From Stationary Boilers",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-09",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06832/air-plan-approval-missouri-revisions-to-existing-rule-10-csr-10-5570-control-of-sulfur-emissions"
+  },
+  {
+    "document_number": "2026-06267",
+    "title": "Fisheries of the Exclusive Economic Zone Off Alaska; Pacific Cod by Pot Catcher/Processors in the Bering Sea and Aleutian Islands Management Area",
+    "doc_type": "Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-04-01",
+    "significant": false,
+    "industries": [
+      "114",
+      "112"
+    ],
+    "etfs": [
+      "MOO"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06267/fisheries-of-the-exclusive-economic-zone-off-alaska-pacific-cod-by-pot-catcherprocessors-in-the"
+  },
+  {
+    "document_number": "2026-07101",
+    "title": "Airworthiness Directives; Airbus Helicopters",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-13",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.5833333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/13/2026-07101/airworthiness-directives-airbus-helicopters"
+  },
+  {
+    "document_number": "2026-06395",
+    "title": "Ohio: Authorization of State Hazardous Waste Management Program Revisions",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06395/ohio-authorization-of-state-hazardous-waste-management-program-revisions"
+  },
+  {
+    "document_number": "2026-06992",
+    "title": "Protecting Our Communications Networks by Promoting Transparency Regarding Foreign Adversary Control",
+    "doc_type": "Rule",
+    "agency": "federal-communications-commission",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "517",
+      "515",
+      "518"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "IYZ",
+      "XLC",
+      "XLK"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06992/protecting-our-communications-networks-by-promoting-transparency-regarding-foreign-adversary-control"
+  },
+  {
+    "document_number": "2026-06663",
+    "title": "Magnuson-Stevens Fishery Conservation and Management Act Provisions; Modifications To Conform U.S. Fishery Regulations With the Presidential Proclamation Unleashing Commercial Fishing in the Atlantic",
+    "doc_type": "Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "114",
+      "112"
+    ],
+    "etfs": [
+      "MOO"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06663/magnuson-stevens-fishery-conservation-and-management-act-provisions-modifications-to-conform-us"
+  },
+  {
+    "document_number": "2026-06013",
+    "title": "Railroad Grade Crossings; Stopping Required: Exception for Railroad Grade Crossing Equipped With Active Warning Device Not in Activated State",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-03-27",
+    "significant": false,
+    "industries": [
+      "481",
+      "482",
+      "484",
+      "3361"
+    ],
+    "etfs": [
+      "IYT",
+      "JETS",
+      "LIT",
+      "XLI",
+      "XLY"
+    ],
+    "contamination_score": 0.08333333333333331,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/27/2026-06013/railroad-grade-crossings-stopping-required-exception-for-railroad-grade-crossing-equipped-with"
+  },
+  {
+    "document_number": "2026-06385",
+    "title": "Airworthiness Directives; The Boeing Company Airplanes",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06385/airworthiness-directives-the-boeing-company-airplanes"
+  },
+  {
+    "document_number": "2026-06691",
+    "title": "Airworthiness Directives; The Boeing Company Airplanes",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-07",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/07/2026-06691/airworthiness-directives-the-boeing-company-airplanes"
+  },
+  {
+    "document_number": "2026-06995",
+    "title": "Fisheries of the Exclusive Economic Zone Off Alaska; Pollock in Statistical Area 630 in the Gulf of Alaska",
+    "doc_type": "Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "114",
+      "112"
+    ],
+    "etfs": [
+      "MOO"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06995/fisheries-of-the-exclusive-economic-zone-off-alaska-pollock-in-statistical-area-630-in-the-gulf-of"
+  },
+  {
+    "document_number": "2026-05984",
+    "title": "Airworthiness Directives; Airbus Canada Limited Partnership (Type Certificate Previously Held by C Series Aircraft Limited Partnership (CSALP); Bombardier, Inc.) Airplanes",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-03-27",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.08333333333333331,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/27/2026-05984/airworthiness-directives-airbus-canada-limited-partnership-type-certificate-previously-held-by-c"
+  },
+  {
+    "document_number": "2026-06103",
+    "title": "Softwood Lumber Board Assessment Rate Clarification and Changes to Membership",
+    "doc_type": "Proposed Rule",
+    "agency": "agriculture-department",
+    "publication_date": "2026-03-30",
+    "significant": false,
+    "industries": [
+      "111",
+      "112",
+      "311"
+    ],
+    "etfs": [
+      "MOO",
+      "XLP"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/30/2026-06103/softwood-lumber-board-assessment-rate-clarification-and-changes-to-membership"
+  },
+  {
+    "document_number": "2026-06686",
+    "title": "Citrus Tristeza Virus (CTV) Strain T36 Expressing Spinach Defensin Proteins SoD2, SoD2-1, and SoD2*; Exemption From the Requirement of a Tolerance",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-07",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/07/2026-06686/citrus-tristeza-virus-ctv-strain-t36-expressing-spinach-defensin-proteins-sod2-sod2-1-and-sod2"
+  },
+  {
+    "document_number": "2026-06532",
+    "title": "Airworthiness Directives; Costruzioni Aeronautiche Tecnam S.P.A. Airplanes",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06532/airworthiness-directives-costruzioni-aeronautiche-tecnam-spa-airplanes"
+  },
+  {
+    "document_number": "2026-06527",
+    "title": "Airworthiness Directives; Honda Aircraft Company LLC Airplanes",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06527/airworthiness-directives-honda-aircraft-company-llc-airplanes"
+  },
+  {
+    "document_number": "2026-06943",
+    "title": "Air Plan Approval; Ohio; Redesignation of the Cleveland, OH Area to Attainment of the 2015 Ozone Standards",
+    "doc_type": "Proposed Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06943/air-plan-approval-ohio-redesignation-of-the-cleveland-oh-area-to-attainment-of-the-2015-ozone"
+  },
+  {
+    "document_number": "2026-06891",
+    "title": "Grapes Grown in a Designated Area of Southeastern California; Decreased Assessment Rate",
+    "doc_type": "Rule",
+    "agency": "agriculture-department",
+    "publication_date": "2026-04-09",
+    "significant": false,
+    "industries": [
+      "111",
+      "112",
+      "311"
+    ],
+    "etfs": [
+      "MOO",
+      "XLP"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06891/grapes-grown-in-a-designated-area-of-southeastern-california-decreased-assessment-rate"
+  },
+  {
+    "document_number": "2026-07064",
+    "title": "Revisions to the Calculation of Annual Household Income and Net Family Assets in the Section 515 Rural Rental Housing and Section 514/516 Farm Labor Housing Programs",
+    "doc_type": "Rule",
+    "agency": "agriculture-department",
+    "publication_date": "2026-04-13",
+    "significant": false,
+    "industries": [
+      "111",
+      "112",
+      "311"
+    ],
+    "etfs": [
+      "MOO",
+      "XLP"
+    ],
+    "contamination_score": 0.5833333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/13/2026-07064/revisions-to-the-calculation-of-annual-household-income-and-net-family-assets-in-the-section-515"
+  },
+  {
+    "document_number": "2026-06614",
+    "title": "Federal Motor Vehicle Safety Standards; Occupant Crash Protection, Seat Belt Reminder Systems",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "481",
+      "482",
+      "484",
+      "3361"
+    ],
+    "etfs": [
+      "IYT",
+      "JETS",
+      "LIT",
+      "XLI",
+      "XLY"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06614/federal-motor-vehicle-safety-standards-occupant-crash-protection-seat-belt-reminder-systems"
+  },
+  {
+    "document_number": "2026-06747",
+    "title": "The Sunset Rule-Aircraft Impact Assessment",
+    "doc_type": "Rule",
+    "agency": "nuclear-regulatory-commission",
+    "publication_date": "2026-04-08",
+    "significant": false,
+    "industries": [
+      "2211",
+      "221",
+      "562",
+      "211"
+    ],
+    "etfs": [
+      "ICLN",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XLE",
+      "XLI",
+      "XLU",
+      "XOP"
+    ],
+    "contamination_score": 0.5,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/08/2026-06747/the-sunset-rule-aircraft-impact-assessment"
+  },
+  {
+    "document_number": "2026-06396",
+    "title": "Air Plan Approval; Michigan; Detroit 2010 Sulfur Dioxide Redesignation and Maintenance Plan",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06396/air-plan-approval-michigan-detroit-2010-sulfur-dioxide-redesignation-and-maintenance-plan"
+  },
+  {
+    "document_number": "2026-06515",
+    "title": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to Texas Parks and Wildlife Department Fisheries Research; Correction",
+    "doc_type": "Proposed Rule",
+    "agency": "commerce-department",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "114",
+      "112"
+    ],
+    "etfs": [
+      "MOO"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06515/takes-of-marine-mammals-incidental-to-specified-activities-taking-marine-mammals-incidental-to-texas"
+  },
+  {
+    "document_number": "2026-06563",
+    "title": "Airworthiness Directives; Airbus SAS Airplanes",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06563/airworthiness-directives-airbus-sas-airplanes"
+  },
+  {
+    "document_number": "2026-05960",
+    "title": "Regulatory Capital Rules: Regulatory Capital and Standardized Approach for Risk-Weighted Assets",
+    "doc_type": "Proposed Rule",
+    "agency": "treasury-department",
+    "publication_date": "2026-03-27",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.08333333333333331,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/27/2026-05960/regulatory-capital-rules-regulatory-capital-and-standardized-approach-for-risk-weighted-assets"
+  },
+  {
+    "document_number": "2026-06506",
+    "title": "Airworthiness Directives; Bombardier Inc. Airplanes",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-03",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.8,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/03/2026-06506/airworthiness-directives-bombardier-inc-airplanes"
+  },
+  {
+    "document_number": "2026-06271",
+    "title": "Whistleblower Incentives and Protections",
+    "doc_type": "Proposed Rule",
+    "agency": "treasury-department",
+    "publication_date": "2026-04-01",
+    "significant": false,
+    "industries": [
+      "522",
+      "523",
+      "525"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF",
+      "XLRE"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06271/whistleblower-incentives-and-protections"
+  },
+  {
+    "document_number": "2026-06384",
+    "title": "Air Plan Approval; Connecticut; New Source Review Permit Program State Plan Revision",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06384/air-plan-approval-connecticut-new-source-review-permit-program-state-plan-revision"
+  },
+  {
+    "document_number": "2026-06305",
+    "title": "Establishment of Class E Airspace; Jewett, TX",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-01",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.5333333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/01/2026-06305/establishment-of-class-e-airspace-jewett-tx"
+  },
+  {
+    "document_number": "2026-06848",
+    "title": "Modification of Class E Airspace, Omak Airport, Omak, WA",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-09",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06848/modification-of-class-e-airspace-omak-airport-omak-wa"
+  },
+  {
+    "document_number": "2026-06947",
+    "title": "Prohibition on the Use of Reputation Risk by Regulators",
+    "doc_type": "Rule",
+    "agency": "treasury-department",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "522",
+      "523"
+    ],
+    "etfs": [
+      "IAI",
+      "KIE",
+      "KRE",
+      "XLF"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06947/prohibition-on-the-use-of-reputation-risk-by-regulators"
+  },
+  {
+    "document_number": "2026-06441",
+    "title": "Finding of Failure To Attain the 2006 24-Hour PM2.5 Standards; California; San Joaquin Valley; Error Correction",
+    "doc_type": "Proposed Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06441/finding-of-failure-to-attain-the-2006-24-hour-pm25-standards-california-san-joaquin-valley-error"
+  },
+  {
+    "document_number": "2026-06397",
+    "title": "Air Plan Approval; Ohio; Muskingum River 2010 Sulfur Dioxide Redesignation and Maintenance Plan",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06397/air-plan-approval-ohio-muskingum-river-2010-sulfur-dioxide-redesignation-and-maintenance-plan"
+  },
+  {
+    "document_number": "2026-06398",
+    "title": "Air Plan Approval; Ohio; Ohio Permit Rules Revisions",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06398/air-plan-approval-ohio-ohio-permit-rules-revisions"
+  },
+  {
+    "document_number": "2026-06938",
+    "title": "Air Plan Approval; New York; Interstate Transport Requirements for the 2010 SO2 NAAQS",
+    "doc_type": "Proposed Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-10",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.33333333333333337,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/10/2026-06938/air-plan-approval-new-york-interstate-transport-requirements-for-the-2010-so2-naaqs"
+  },
+  {
+    "document_number": "2026-06775",
+    "title": "Update to EPAAR Text of Provisions and Clauses, Signing of Uniform Hazardous Wastes Manifests",
+    "doc_type": "Proposed Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-08",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562",
+      "3364",
+      "5415",
+      "334",
+      "928"
+    ],
+    "etfs": [
+      "CIBR",
+      "HACK",
+      "IBB",
+      "ICLN",
+      "IHI",
+      "ITA",
+      "IYZ",
+      "JETS",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "SMH",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLK",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.5,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/08/2026-06775/update-to-epaar-text-of-provisions-and-clauses-signing-of-uniform-hazardous-wastes-manifests"
+  },
+  {
+    "document_number": "2026-06642",
+    "title": "Medicare Program; Inpatient Rehabilitation Facility Prospective Payment System for Federal Fiscal Year 2027 and Updates to the IRF Quality Reporting Program",
+    "doc_type": "Proposed Rule",
+    "agency": "health-and-human-services-department",
+    "publication_date": "2026-04-06",
+    "significant": false,
+    "industries": [
+      "621",
+      "622",
+      "524"
+    ],
+    "etfs": [
+      "IBB",
+      "IHF",
+      "KIE",
+      "KRE",
+      "XLF",
+      "XLV"
+    ],
+    "contamination_score": 0.4,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/06/2026-06642/medicare-program-inpatient-rehabilitation-facility-prospective-payment-system-for-federal-fiscal"
+  },
+  {
+    "document_number": "2026-06197",
+    "title": "Backfilling and Grading",
+    "doc_type": "Rule",
+    "agency": "interior-department",
+    "publication_date": "2026-03-31",
+    "significant": false,
+    "industries": [
+      "212"
+    ],
+    "etfs": [
+      "LIT",
+      "XLB",
+      "XME"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/03/31/2026-06197/backfilling-and-grading"
+  },
+  {
+    "document_number": "2026-06386",
+    "title": "Air Quality Plan; California; Mojave Desert Air Quality Management District; Replacing Outdated Requirements; Correction",
+    "doc_type": "Rule",
+    "agency": "environmental-protection-agency",
+    "publication_date": "2026-04-02",
+    "significant": false,
+    "industries": [
+      "211",
+      "212",
+      "221",
+      "322",
+      "324",
+      "325",
+      "562"
+    ],
+    "etfs": [
+      "IBB",
+      "ICLN",
+      "IHI",
+      "LIT",
+      "MOO",
+      "OIH",
+      "PHO",
+      "TAN",
+      "XBI",
+      "XLB",
+      "XLE",
+      "XLI",
+      "XLP",
+      "XLU",
+      "XLV",
+      "XME",
+      "XOP"
+    ],
+    "contamination_score": 0.6666666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/02/2026-06386/air-quality-plan-california-mojave-desert-air-quality-management-district-replacing-outdated"
+  },
+  {
+    "document_number": "2026-07056",
+    "title": "Establishment of Class E Airspace; Wall Municipal Airport, Wall, SD",
+    "doc_type": "Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-13",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.5833333333333334,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/13/2026-07056/establishment-of-class-e-airspace-wall-municipal-airport-wall-sd"
+  },
+  {
+    "document_number": "2026-06907",
+    "title": "Establishment of Class E Airspace; Crown Point, IN",
+    "doc_type": "Proposed Rule",
+    "agency": "transportation-department",
+    "publication_date": "2026-04-09",
+    "significant": false,
+    "industries": [
+      "3364",
+      "481"
+    ],
+    "etfs": [
+      "ITA",
+      "IYT",
+      "JETS",
+      "XLI"
+    ],
+    "contamination_score": 0.4166666666666667,
+    "html_url": "https://www.federalregister.gov/documents/2026/04/09/2026-06907/establishment-of-class-e-airspace-crown-point-in"
+  }
+]

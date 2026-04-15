@@ -1,0 +1,307 @@
+name: Update legislation & precedents
+
+on:
+  schedule:
+    # Legislation: daily at 06:00 UTC
+    - cron: '0 6 * * *'
+    # Precedents: weekly on Sunday at 08:00 UTC
+    - cron: '0 8 * * 0'
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'What to update'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - legislation
+          - precedents
+          - federal
+          - bc
+          - us-federal
+          - us-precedent
+          - ca-precedent
+
+jobs:
+  # ── Legislation (daily) ─────────────────────────────────────
+  update-canada:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event.schedule == '0 6 * * *' ||
+      contains(fromJSON('["all","legislation","federal","bc"]'), github.event.inputs.target)
+    steps:
+      - name: Checkout pipeline
+        uses: actions/checkout@v4
+
+      - name: Checkout data repo
+        uses: actions/checkout@v4
+        with:
+          repository: mattheogim/legalize-ca
+          path: legalize-ca
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Clone Justice Canada XML
+        run: git clone --depth 1 https://github.com/justicecanada/laws-lois-xml
+
+      - name: Update federal legislation
+        run: |
+          python -m legalize_ca.cli federal \
+            --local-xml ./laws-lois-xml \
+            --output-dir ./legalize-ca
+
+      - name: Update BC legislation
+        run: |
+          python -m legalize_ca.cli bc \
+            --output-dir ./legalize-ca
+
+      - name: Push changes
+        working-directory: legalize-ca
+        run: |
+          git config user.name "legalize-bot"
+          git config user.email "legalize-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "update: daily legislation sync $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to push"
+          fi
+
+  update-us-code:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event.schedule == '0 6 * * *' ||
+      contains(fromJSON('["all","legislation","us-federal"]'), github.event.inputs.target)
+    steps:
+      - name: Checkout pipeline
+        uses: actions/checkout@v4
+
+      - name: Checkout US data repo
+        uses: actions/checkout@v4
+        with:
+          repository: mattheogim/legalize-us
+          path: legalize-us
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Find latest US Code release from GitHub Releases
+        id: usc-release
+        env:
+          GH_TOKEN: ${{ secrets.DATA_REPO_TOKEN }}
+        run: |
+          # Strategy: use pre-cached ZIP from GitHub Releases (uploaded via scripts/upload_usc_release.sh)
+          # This avoids uscode.house.gov blocking GitHub Actions IPs
+
+          echo "Checking GitHub Releases for cached US Code XML..."
+          LATEST_TAG=$(gh release list --repo mattheogim/legalize-us --limit 5 --json tagName,name \
+            -q '.[].tagName' | grep '^usc-pl-' | head -1 || true)
+
+          if [ -z "$LATEST_TAG" ]; then
+            echo "::error::No cached US Code release found. Run locally with VPN:"
+            echo "  ./scripts/upload_usc_release.sh"
+            exit 1
+          fi
+
+          # Extract release point from tag (usc-pl-119-73 → 119/73)
+          PL=$(echo "$LATEST_TAG" | sed 's/usc-pl-//')
+          RELEASE=$(echo "$PL" | tr '-' '/')
+
+          echo "release=${RELEASE}" >> "$GITHUB_OUTPUT"
+          echo "pl=${PL}" >> "$GITHUB_OUTPUT"
+          echo "tag=${LATEST_TAG}" >> "$GITHUB_OUTPUT"
+          echo "Using cached release: pl/${RELEASE} (tag: ${LATEST_TAG})"
+
+      - name: Download US Code XML from GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.DATA_REPO_TOKEN }}
+        run: |
+          mkdir -p usc-xml
+          TAG="${{ steps.usc-release.outputs.tag }}"
+          PL="${{ steps.usc-release.outputs.pl }}"
+
+          echo "Downloading from GitHub Release ${TAG}..."
+          gh release download "$TAG" \
+            --repo mattheogim/legalize-us \
+            --pattern "xml_uscAll@${PL}.zip" \
+            --dir usc-xml
+
+          # Rename to consistent name
+          mv "usc-xml/xml_uscAll@${PL}.zip" usc-xml/usc-all.zip
+
+          FILE_SIZE=$(stat -c%s usc-xml/usc-all.zip)
+          echo "Downloaded ${FILE_SIZE} bytes from GitHub Release"
+
+          if [ "$FILE_SIZE" -lt 100000 ]; then
+            echo "::error::File too small (${FILE_SIZE} bytes)"
+            exit 1
+          fi
+
+          cd usc-xml && unzip -o usc-all.zip && rm usc-all.zip
+
+      - name: Update US Code
+        run: |
+          python -m legalize_ca.cli us-federal \
+            --local-xml ./usc-xml \
+            --output-dir ./legalize-us
+
+      - name: Push changes
+        working-directory: legalize-us
+        run: |
+          git config user.name "legalize-bot"
+          git config user.email "legalize-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "update: US Code sync pl/${{ steps.usc-release.outputs.release }} $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to push"
+          fi
+
+  # ── Precedents (weekly) ─────────────────────────────────────
+  update-us-precedent:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event.schedule == '0 8 * * 0' ||
+      contains(fromJSON('["all","precedents","us-precedent"]'), github.event.inputs.target)
+    steps:
+      - name: Checkout pipeline
+        uses: actions/checkout@v4
+
+      - name: Checkout precedent-us repo
+        uses: actions/checkout@v4
+        with:
+          repository: mattheogim/precedent-us
+          path: precedent-us
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Fetch US court opinions
+        env:
+          COURTLISTENER_TOKEN: ${{ secrets.COURTLISTENER_TOKEN }}
+        run: |
+          python3 -c "
+          import logging, os
+          from pathlib import Path
+          from legalize_ca.fetchers.courtlistener import CourtListenerFetcher
+
+          logging.basicConfig(level=logging.INFO)
+          token = os.environ['COURTLISTENER_TOKEN']
+          out = Path('precedent-us')
+          f = CourtListenerFetcher(api_token=token, throttle=2.0)
+
+          # SCOTUS: all new opinions; Circuit courts: latest 50 each
+          courts = ['scotus','ca1','ca2','ca3','ca4','ca5','ca6',
+                    'ca7','ca8','ca9','ca10','ca11','cadc','cafc']
+          for court_id in courts:
+              limit = 0 if court_id == 'scotus' else 50
+              for doc in f.fetch_court(court_id, limit=limit, full_text=True):
+                  p = out / doc.output_path
+                  if p.exists():
+                      continue  # skip already-fetched opinions
+                  p.parent.mkdir(parents=True, exist_ok=True)
+                  p.write_text(doc.to_markdown(), encoding='utf-8')
+                  logging.info(f'Wrote {doc.output_path}')
+          "
+
+      - name: Push changes
+        working-directory: precedent-us
+        run: |
+          git config user.name "legalize-bot"
+          git config user.email "legalize-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "update: weekly US precedent sync $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to push"
+          fi
+
+  update-ca-precedent:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event.schedule == '0 8 * * 0' ||
+      contains(fromJSON('["all","precedents","ca-precedent"]'), github.event.inputs.target)
+    steps:
+      - name: Checkout pipeline
+        uses: actions/checkout@v4
+
+      - name: Checkout precedent-ca repo
+        uses: actions/checkout@v4
+        with:
+          repository: mattheogim/precedent-ca
+          path: precedent-ca
+          token: ${{ secrets.DATA_REPO_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Fetch Canadian court opinions
+        env:
+          CANLII_API_KEY: ${{ secrets.CANLII_API_KEY }}
+        run: |
+          python3 -c "
+          import logging, os
+          from pathlib import Path
+          from legalize_ca.fetchers.canlii_cases import CanLIICaseFetcher
+
+          logging.basicConfig(level=logging.INFO)
+          api_key = os.environ.get('CANLII_API_KEY', '')
+          if not api_key:
+              logging.warning('CANLII_API_KEY not set, skipping')
+              exit(0)
+
+          out = Path('precedent-ca')
+          f = CanLIICaseFetcher(api_key=api_key)
+          for doc in f.fetch_all(limit_per_court=50):
+              p = out / doc.output_path
+              if p.exists():
+                  continue
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(doc.to_markdown(), encoding='utf-8')
+              logging.info(f'Wrote {doc.output_path}')
+          "
+
+      - name: Push changes
+        working-directory: precedent-ca
+        run: |
+          git config user.name "legalize-bot"
+          git config user.email "legalize-bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "update: weekly CA precedent sync $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to push"
+          fi

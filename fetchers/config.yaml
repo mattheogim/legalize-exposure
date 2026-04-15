@@ -1,0 +1,50 @@
+# Exposure engine — data source configuration
+# Each source has its own section with connection params.
+# API keys use ${ENV_VAR} syntax — resolved at runtime.
+
+sources:
+  federal_register:
+    base_url: "https://www.federalregister.gov/api/v1"
+    rate_limit_rps: 2.0
+    request_timeout: 30
+    max_retries: 3
+    # No auth required.
+    # Doc types: PRORULE, RULE, NOTICE, PRESDOC
+    significant_only: false
+
+  congress:
+    base_url: "https://api.congress.gov/v3"
+    api_key: "${CONGRESS_API_KEY}"
+    rate_limit_rps: 1.0
+    request_timeout: 30
+    max_retries: 3
+    # Rate limit: 1000 req/hr with key, 100/hr with DEMO_KEY.
+    # Bill types: hr, s, hjres, sjres
+
+  courtlistener:
+    base_url: "https://www.courtlistener.com"
+    api_token: "${COURTLISTENER_API_TOKEN}"
+    rate_limit_rps: 1.0
+    request_timeout: 30
+    max_retries: 3
+    # Requires free API token (sign up at courtlistener.com).
+    # API v4 only for new accounts.
+
+  canlii:
+    base_url: "https://api.canlii.org/v1"
+    api_key: "${CANLII_API_KEY}"
+    rate_limit_rps: 2.0
+    request_timeout: 30
+    max_retries: 3
+    # Metadata only. 5000 queries/day, 2 req/s, 1 concurrent.
+    # API key pending (requested 2026-04-15).
+
+  # Future sources:
+  # sec_edgar:
+  #   base_url: "https://efts.sec.gov/LATEST"
+  #   user_agent: "Company Name email@example.com"
+  #   rate_limit_rps: 10.0
+  #
+  # fred:
+  #   base_url: "https://api.stlouisfed.org/fred"
+  #   api_key: "${FRED_API_KEY}"
