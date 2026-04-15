@@ -239,6 +239,37 @@ _AGENCY_MAP: dict[str, list[dict]] = {
 }
 
 
+# ── Agency slug aliases ─────────────────────────────────────────────────
+# The Federal Register API uses different slug formats depending on context.
+# This maps alternative slugs to canonical slugs used in _AGENCY_MAP.
+
+_AGENCY_ALIASES: dict[str, str] = {
+    # "{name}-department" ↔ "department-of-{name}" variants
+    "transportation-department": "department-of-transportation",
+    "treasury-department": "department-of-the-treasury",
+    "agriculture-department": "department-of-agriculture",
+    "commerce-department": "department-of-commerce",
+    "defense-department": "department-of-defense",
+    "education-department": "department-of-education",
+    "energy-department": "department-of-energy",
+    "interior-department": "department-of-the-interior",
+    "justice-department": "department-of-justice",
+    "labor-department": "department-of-labor",
+    "homeland-security-department": "department-of-homeland-security",
+    "health-and-human-services-department": "department-of-health-and-human-services",
+    "housing-and-urban-development-department": "department-of-housing-and-urban-development",
+    "veterans-affairs-department": "department-of-veterans-affairs",
+    # Sub-agencies and independent agencies
+    "federal-reserve-system": "department-of-the-treasury",  # monetary policy → financial
+    "national-credit-union-administration": "federal-deposit-insurance-corporation",  # credit unions ≈ banking
+    "farm-credit-administration": "department-of-agriculture",  # farm credit ≈ agriculture
+    "pension-benefit-guaranty-corporation": "department-of-labor",  # pensions ≈ labor
+    "financial-stability-oversight-council": "department-of-the-treasury",  # FSOC ≈ Treasury
+    "office-of-the-national-cyber-director": "department-of-homeland-security",  # cyber ≈ DHS
+    "consumer-product-safety-commission": "federal-trade-commission",  # CPSC ≈ FTC (consumer safety)
+}
+
+
 # ── LF2: CFR Title → Industry ───────────────────────────────────────────
 
 # Code of Federal Regulations titles → primary affected industries
@@ -425,8 +456,14 @@ class AgencyLookup:
         self._map = _AGENCY_MAP
 
     def match(self, agency_slug: str) -> list[IndustryMatch]:
-        """Return industry matches for a Federal Register agency slug."""
-        entries = self._map.get(agency_slug, [])
+        """Return industry matches for a Federal Register agency slug.
+
+        Resolves aliases automatically (e.g., "treasury-department" →
+        "department-of-the-treasury").
+        """
+        # Resolve alias if needed.
+        canonical = _AGENCY_ALIASES.get(agency_slug, agency_slug)
+        entries = self._map.get(canonical, [])
         return [
             IndustryMatch(
                 naics_code=e["naics"],
