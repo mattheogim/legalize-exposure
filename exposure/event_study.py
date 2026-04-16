@@ -86,8 +86,11 @@ class EventStudyResult:
     # Model parameters
     alpha: float = 0.0                  # OLS intercept
     beta: float = 0.0                   # OLS slope (market sensitivity)
+    beta_smb: float = 0.0              # FF3: size factor loading
+    beta_hml: float = 0.0              # FF3: value factor loading
     r_squared: float = 0.0             # model fit
     estimation_std: float = 0.0         # residual std from estimation
+    model_type: str = "market"          # "market" or "ff3"
 
     # Metadata
     estimation_days: int = 0
@@ -340,6 +343,173 @@ def _ols_market_model(
     return alpha, beta, max(0, r_squared), residual_std
 
 
+# ── FF3 Factor Data ──────────────────────────────────────────────────
+
+# Kenneth French Data Library: daily Fama-French 3 factors
+# URL: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
+# Format: CSV with date, Mkt-RF, SMB, HML, RF (all in percent)
+
+_FF3_CACHE: dict[str, dict[date, tuple[float, float, float, float]]] = {}
+
+
+def fetch_ff3_factors(start: date, end: date) -> dict[date, tuple[float, float, float, float]]:
+    """Fetch daily Fama-French 3 factors from Kenneth French Data Library.
+
+    Returns dict mapping date → (mkt_rf, smb, hml, rf) as decimals (not percent).
+    Uses cached data if available.
+
+    [src:kothari-warner-2007] Minimum standard: CAPM + FF3. Results should
+    hold across both to be considered robust.
+    """
+    cache_key = "ff3_daily"
+    if cache_key in _FF3_CACHE:
+        return _FF3_CACHE[cache_key]
+
+    import io
+    import zipfile
+
+    url = "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_daily_CSV.zip"
+
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "legalize-bot/1.0"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            content = resp.read()
+
+        with zipfile.ZipFile(io.BytesIO(content)) as zf:
+            csv_name = [n for n in zf.namelist() if n.endswith(".CSV") or n.endswith(".csv")][0]
+            raw = zf.read(csv_name).decode("utf-8")
+
+        factors: dict[date, tuple[float, float, float, float]] = {}
+        in_data = False
+
+        for line in raw.split("\n"):
+            line = line.strip()
+            if not line:
+                if in_data:
+                    break  # End of daily data section
+                continue
+
+            # Skip header lines until we find data rows (start with a date like 19260701)
+            parts = line.split(",")
+            if len(parts) >= 5 and parts[0].strip().isdigit() and len(parts[0].strip()) == 8:
+                in_data = True
+                try:
+                    date_str = parts[0].strip()
+                    d = date(int(date_str[:4]), int(date_str[4:6]), int(date_str[6:8]))
+                    mkt_rf = float(parts[1].strip()) / 100.0  # Convert from percent
+                    smb = float(parts[2].strip()) / 100.0
+                    hml = float(parts[3].strip()) / 100.0
+                    rf = float(parts[4].strip()) / 100.0
+                    factors[d] = (mkt_rf, smb, hml, rf)
+                except (ValueError, IndexError):
+                    continue
+
+        logger.info("Loaded %d days of FF3 factor data", len(factors))
+        _FF3_CACHE[cache_key] = factors
+        return factors
+
+    except Exception as e:
+        logger.warning("Failed to fetch FF3 factors: %s. Falling back to Market Model.", e)
+        return {}
+
+
+def _ols_ff3_model(
+    stock_returns: list[float],
+    mkt_rf: list[float],
+    smb: list[float],
+    hml: list[float],
+    rf: list[float],
+) -> tuple[float, float, float, float, float, float]:
+    """Fit OLS Fama-French 3-factor model.
+
+    R_i - R_f = α + β₁(R_m - R_f) + β₂·SMB + β₃·HML + ε
+
+    Returns (alpha, beta_mkt, beta_smb, beta_hml, r_squared, residual_std).
+    Pure Python — no numpy dependency.
+    """
+    n = len(stock_returns)
+    if n < 20:
+        return 0.0, 1.0, 0.0, 0.0, 0.0, 0.01
+
+    # Excess returns
+    y = [stock_returns[i] - rf[i] for i in range(n)]
+
+    # X matrix: [1, mkt_rf, smb, hml] for each observation
+    # Normal equations: (X'X)β = X'y
+    # For 4 regressors, solve 4x4 system
+
+    # Compute X'X and X'y
+    k = 4  # intercept + 3 factors
+    xty = [0.0] * k
+    xtx = [[0.0] * k for _ in range(k)]
+
+    for i in range(n):
+        x = [1.0, mkt_rf[i], smb[i], hml[i]]
+        for j in range(k):
+            xty[j] += x[j] * y[i]
+            for m in range(k):
+                xtx[j][m] += x[j] * x[m]
+
+    # Solve via Gaussian elimination (4x4 is tiny)
+    coeffs = _solve_linear_system(xtx, xty)
+    if coeffs is None:
+        return 0.0, 1.0, 0.0, 0.0, 0.0, 0.01
+
+    alpha, beta_mkt, beta_smb, beta_hml = coeffs
+
+    # Residuals
+    mean_y = sum(y) / n
+    ss_res = 0.0
+    ss_tot = 0.0
+    for i in range(n):
+        predicted = alpha + beta_mkt * mkt_rf[i] + beta_smb * smb[i] + beta_hml * hml[i]
+        residual = y[i] - predicted
+        ss_res += residual ** 2
+        ss_tot += (y[i] - mean_y) ** 2
+
+    r_squared = 1.0 - (ss_res / ss_tot) if ss_tot > 0 else 0.0
+    residual_std = math.sqrt(ss_res / (n - k)) if n > k else 0.01
+
+    return alpha, beta_mkt, beta_smb, beta_hml, max(0, r_squared), residual_std
+
+
+def _solve_linear_system(A: list[list[float]], b: list[float]) -> list[float] | None:
+    """Solve Ax = b via Gaussian elimination with partial pivoting.
+
+    For small systems (4x4). Returns None if singular.
+    """
+    n = len(b)
+    # Augmented matrix
+    aug = [A[i][:] + [b[i]] for i in range(n)]
+
+    for col in range(n):
+        # Partial pivoting
+        max_row = col
+        for row in range(col + 1, n):
+            if abs(aug[row][col]) > abs(aug[max_row][col]):
+                max_row = row
+        aug[col], aug[max_row] = aug[max_row], aug[col]
+
+        if abs(aug[col][col]) < 1e-12:
+            return None
+
+        # Eliminate below
+        for row in range(col + 1, n):
+            factor = aug[row][col] / aug[col][col]
+            for j in range(col, n + 1):
+                aug[row][j] -= factor * aug[col][j]
+
+    # Back substitution
+    x = [0.0] * n
+    for i in range(n - 1, -1, -1):
+        x[i] = aug[i][n]
+        for j in range(i + 1, n):
+            x[i] -= aug[i][j] * x[j]
+        x[i] /= aug[i][i]
+
+    return x
+
+
 # ── Event Study Engine ────────────────────────────────────────────────
 
 class EventStudyEngine:
@@ -368,6 +538,7 @@ class EventStudyEngine:
         pre_gap: int = 10,
         event_window: tuple[int, int] = (5, 5),
         use_simulated: bool = False,
+        model: str = "market",  # "market" (CAPM) or "ff3" (Fama-French 3)
     ):
         self.benchmark = benchmark
         self.estimation_days = estimation_days
@@ -375,7 +546,9 @@ class EventStudyEngine:
         self.event_pre = event_window[0]
         self.event_post = event_window[1]
         self.use_simulated = use_simulated
+        self.model = model
         self._price_cache: dict[str, list[DailyReturn]] = {}
+        self._ff3_factors: dict[date, tuple[float, float, float, float]] = {}
 
     def run(
         self,
@@ -441,14 +614,64 @@ class EventStudyEngine:
             est_stock = [stock_by_date[common_dates[i]].return_pct for i in range(est_start_idx, est_end_idx)]
             est_market = [market_by_date[common_dates[i]].return_pct for i in range(est_start_idx, est_end_idx)]
 
-            # Fit market model
-            alpha, beta, r_sq, res_std = _ols_market_model(est_stock, est_market)
+            # Fit model (Market Model or FF3)
+            if self.model == "ff3":
+                result.model_type = "ff3"
+                # Fetch FF3 factors if not cached
+                if not self._ff3_factors:
+                    self._ff3_factors = fetch_ff3_factors(fetch_start, fetch_end)
 
-            result.alpha = alpha
-            result.beta = beta
-            result.r_squared = r_sq
-            result.estimation_std = res_std
-            result.estimation_days = len(est_stock)
+                if self._ff3_factors:
+                    # Build aligned factor arrays for estimation window
+                    est_mkt_rf, est_smb, est_hml, est_rf = [], [], [], []
+                    est_stock_ff3 = []
+                    for i in range(est_start_idx, est_end_idx):
+                        d = common_dates[i]
+                        if d in self._ff3_factors:
+                            mkt_rf, smb, hml, rf = self._ff3_factors[d]
+                            est_mkt_rf.append(mkt_rf)
+                            est_smb.append(smb)
+                            est_hml.append(hml)
+                            est_rf.append(rf)
+                            est_stock_ff3.append(stock_by_date[d].return_pct)
+
+                    if len(est_stock_ff3) >= 20:
+                        alpha, beta, beta_smb, beta_hml, r_sq, res_std = _ols_ff3_model(
+                            est_stock_ff3, est_mkt_rf, est_smb, est_hml, est_rf,
+                        )
+                        result.alpha = alpha
+                        result.beta = beta
+                        result.beta_smb = beta_smb
+                        result.beta_hml = beta_hml
+                        result.r_squared = r_sq
+                        result.estimation_std = res_std
+                        result.estimation_days = len(est_stock_ff3)
+                    else:
+                        logger.warning("Insufficient FF3 data, falling back to Market Model")
+                        result.model_type = "market"
+                        alpha, beta, r_sq, res_std = _ols_market_model(est_stock, est_market)
+                        result.alpha = alpha
+                        result.beta = beta
+                        result.r_squared = r_sq
+                        result.estimation_std = res_std
+                        result.estimation_days = len(est_stock)
+                else:
+                    logger.warning("FF3 factors unavailable, falling back to Market Model")
+                    result.model_type = "market"
+                    alpha, beta, r_sq, res_std = _ols_market_model(est_stock, est_market)
+                    result.alpha = alpha
+                    result.beta = beta
+                    result.r_squared = r_sq
+                    result.estimation_std = res_std
+                    result.estimation_days = len(est_stock)
+            else:
+                result.model_type = "market"
+                alpha, beta, r_sq, res_std = _ols_market_model(est_stock, est_market)
+                result.alpha = alpha
+                result.beta = beta
+                result.r_squared = r_sq
+                result.estimation_std = res_std
+                result.estimation_days = len(est_stock)
 
             # Event window: calculate abnormal returns
             abnormal_returns = []
@@ -461,7 +684,14 @@ class EventStudyEngine:
                 relative_day = i - event_idx
 
                 actual = stock_by_date[d].return_pct
-                expected = alpha + beta * market_by_date[d].return_pct
+
+                # Expected return depends on model
+                if result.model_type == "ff3" and d in self._ff3_factors:
+                    mkt_rf, smb, hml, rf = self._ff3_factors[d]
+                    expected = rf + result.alpha + result.beta * mkt_rf + result.beta_smb * smb + result.beta_hml * hml
+                else:
+                    expected = result.alpha + result.beta * market_by_date[d].return_pct
+
                 ar = actual - expected
 
                 abnormal_returns.append((relative_day, ar))
