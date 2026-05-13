@@ -2,15 +2,15 @@
 
 **Regulation-to-Exposure Mapping Platform**
 
-법률/규제 변경 → 산업 매핑 → ETF 노출도 추적. 시장 예측기가 아닌, 규제 이벤트 브라우저 + 시장 컨텍스트 뷰어.
+Law/regulation changes → industry mapping → ETF exposure tracking. Not a market predictor — a regulation-event browser plus a market-context viewer.
 
 ---
 
-## 프로젝트 구조
+## Project structure
 
 ```
 legalize/
-├── exposure/              # 핵심 엔진 (7,580줄)
+├── exposure/              # Core engine (7,580 lines)
 │   ├── schema.py          # 7-layer ontology, edge types, temporal edges
 │   ├── lookups.py         # 31 agencies + 29 CFR titles → 55 NAICS
 │   ├── etf_exposure.py    # 35 ETFs, holdings-based exposure score
@@ -52,28 +52,33 @@ legalize/
 │
 ├── docs/                  # Documentation (6 files)
 │   │
-│   │  ── 핵심 문서 (의사결정할 때 보는 것) ──
-│   ├── DESIGN_PRINCIPLES.md     # 설계 원칙 16조 — 제품 정체성, edge 설계, LLM 사용 원칙, 금지 표현 등
-│   │                            #   "흔들리지 말 것" 리스트. 불변. 모든 의사결정의 나침반.
-│   ├── SPEC.md                  # 프로젝트 전체 스펙 — 타깃 유저 5그룹, event study 방법론 (CAR/t-stat),
-│   │                            #   기술 아키텍처 (FastAPI+React), 4-phase 30주 로드맵, 경쟁 분석, 리스크
-│   ├── ROADMAP.md               # 실행 로드맵 — Phase 0(완료)~4, 데이터소스 확장 (EDGAR/FRED/USPTO/USITC),
-│   │                            #   기술 우선순위. 진행 상태 추적용 (자주 업데이트됨)
+│   │  ── Core documents (consulted when making decisions) ──
+│   ├── DESIGN_PRINCIPLES.md     # 16 design principles — product identity, edge design, LLM usage,
+│   │                            #   forbidden phrasing, etc. The "don't waver" list. Immutable. The compass
+│   │                            #   for every decision.
+│   ├── SPEC.md                  # Full project spec — 5 target user groups, event-study methodology
+│   │                            #   (CAR/t-stat), tech architecture (FastAPI+React), 4-phase 30-week roadmap,
+│   │                            #   competitive analysis, risks
+│   ├── ROADMAP.md               # Execution roadmap — Phase 0 (done) → Phase 4, data-source expansion
+│   │                            #   (EDGAR/FRED/USPTO/USITC), technical priorities. Status tracker
+│   │                            #   (updated often)
 │   │
-│   │  ── 검증 기록 (왜 이렇게 결정했는지 근거) ──
-│   ├── CROSS_VALIDATION.md      # 4-AI(Claude/GPT/Gemini/Meta) 교차검증 결과 — 전원합의 8개, 강한합의 8개,
-│   │                            #   부분합의 10개, 독자적 인사이트 9개, 논문 추천 통합. 의사결정 근거 문서.
-│   ├── VALIDATION_ARCHIVE.md    # 교차검증에 사용한 프롬프트 6개 + AI에 보낸 원본 프롬프트 전문.
-│   │                            #   프로세스 완료된 아카이브. 같은 방식으로 재검증할 때 참고.
+│   │  ── Validation records (rationale behind decisions) ──
+│   ├── CROSS_VALIDATION.md      # 4-AI (Claude/GPT/Gemini/Meta) cross-validation results — 8 unanimous,
+│   │                            #   8 strong consensus, 10 partial consensus, 9 unique insights, paper
+│   │                            #   recommendations integrated. Source-of-truth for decisions.
+│   ├── VALIDATION_ARCHIVE.md    # The 6 prompts used in cross-validation + the original prompts sent to
+│   │                            #   each AI. Archived process. Reference when re-running validation.
 │   │
-│   │  ── 개발자 가이드 (코드 기여할 때 보는 것) ──
-│   └── PIPELINE_GUIDE.md        # 통합 개발자 가이드 — 파이프라인 아키텍처, 데이터소스 & 커버리지,
-│                                #   파일 포맷 (YAML frontmatter), 기여 방법, 새 jurisdiction 추가 절차,
-│                                #   코드 스타일, 커밋 컨벤션, PR 체크리스트, 모델 패치 이력, 라이선스
+│   │  ── Developer guide (consulted when contributing code) ──
+│   └── PIPELINE_GUIDE.md        # Unified developer guide — pipeline architecture, data sources &
+│                                #   coverage, file formats (YAML frontmatter), contribution flow, how to
+│                                #   add a new jurisdiction, code style, commit conventions, PR checklist,
+│                                #   model-patch history, license
 │
 ├── templates/             # GitHub issue/PR templates
-│   ├── bug-report.md      # 버그 리포트 양식 (재현 방법, 예상 동작, 환경)
-│   └── new-jurisdiction.md# 새 법역 추가 요청 양식 (데이터소스, API, 우선순위 근거)
+│   ├── bug-report.md      # Bug-report template (repro, expected behavior, environment)
+│   └── new-jurisdiction.md# New-jurisdiction request template (data source, API, priority rationale)
 │
 └── .github/workflows/
     └── update.yml         # GitHub Actions (daily sync)
@@ -91,54 +96,54 @@ Law → Regulation → Provision → Obligation → RegulatedEntityType → Indu
 
 | Type | Category | Description |
 |------|----------|-------------|
-| CITES | Hard | 법이 규정을 인용 |
-| IMPLEMENTS | Hard | 규정이 법을 구체화 |
-| IMPOSES | Hard | 규정이 의무를 부과 |
-| APPLIES_TO | Hard | 의무가 적용 대상 정의 |
-| MENTIONS | Soft | 텍스트에 키워드 등장 |
-| EXPOSES | Soft | 산업이 ETF에 노출 |
-| NOT_RELATED | Negative | 명시적 제외 |
+| CITES | Hard | Law cites a regulation |
+| IMPLEMENTS | Hard | Regulation implements a law |
+| IMPOSES | Hard | Regulation imposes an obligation |
+| APPLIES_TO | Hard | Obligation defines its target |
+| MENTIONS | Soft | Keyword appears in text |
+| EXPOSES | Soft | Industry exposed to an ETF |
+| NOT_RELATED | Negative | Explicit exclusion |
 
 ## Obligation Types
 
 | Type | Color (UI) | Meaning |
 |------|-----------|---------|
-| RESTRICTS | Red | 제한/규제 강화 |
-| MANDATES | Blue | 의무 부과 |
-| SUBSIDIZES | Green | 보조금/세제 혜택 |
-| EXEMPTS | Yellow | 면제 |
-| PERMITS | Purple | 허용 |
-| MODIFIES_THRESHOLD | Orange | 기준 변경 |
+| RESTRICTS | Red | Restriction / tightening |
+| MANDATES | Blue | Imposes an obligation |
+| SUBSIDIZES | Green | Subsidy / tax benefit |
+| EXEMPTS | Yellow | Exemption |
+| PERMITS | Purple | Permission |
+| MODIFIES_THRESHOLD | Orange | Threshold change |
 
 ## Quick Start
 
 ```bash
-# 파이프라인 실행 (최근 3일 규제)
+# Run the pipeline (last 3 days of regulation)
 python -m exposure.pipeline --days 3 --significant
 
-# 배치 프로세서 (일일)
+# Batch processor (daily)
 python -m exposure.batch --date 2026-04-12
 
-# 밀린 날짜 따라잡기
+# Catch up on missed days
 python -m exposure.batch --catch-up
 
-# Holdings 수집
+# Collect holdings
 python -m exposure.collect_holdings
 
-# 테스트
+# Tests
 python -m pytest exposure/test_exposure.py -v
 ```
 
-## 설계 원칙 (흔들리지 말 것)
+## Design principles (don't waver)
 
 1. Mapping first, market panel later
-2. Hard/soft link 분리
-3. Law → ETF 직접 연결 금지
-4. 7단계 계층 구조
-5. Holdings 기반 ETF exposure
-6. Market panel은 context layer
-7. "impact", "caused" 금지 → "around the time of", "associated with"
-8. Historical replay로 매핑 정확도 검증
+2. Hard / soft link separation
+3. No direct Law → ETF link
+4. 7-layer hierarchy
+5. Holdings-based ETF exposure
+6. Market panel is a context layer
+7. Ban "impact" / "caused" → use "around the time of" / "associated with"
+8. Verify mapping accuracy via historical replay
 
 ## Data Repos
 
@@ -151,20 +156,20 @@ python -m pytest exposure/test_exposure.py -v
 | bills-us | Congress.gov bills | Created |
 | regulations-us | Federal Register docs | Created |
 
-## 현재 상태 (2026-04-12)
+## Current status (2026-04-12)
 
-**완료:** 7,580줄, 17 모듈, 35 ETFs, 31 agencies, 55 NAICS, 128 macro events, 11 tests passing
+**Done:** 7,580 lines, 17 modules, 35 ETFs, 31 agencies, 55 NAICS, 128 macro events, 11 tests passing.
 
-**다음 단계:**
-1. Ex-ante / ex-post contamination 분리
+**Next steps:**
+1. Separate ex-ante / ex-post contamination
 2. Contamination calibration loop + placebo test
 3. ETF exposure intensity (UI)
-4. ETF → regulation 역추적 (Sector Dashboard)
+4. ETF → regulation back-trace (Sector Dashboard)
 5. Git-diff regulatory viewer
 6. Proposed ↔ Final rule matching
-7. 100건 human validation
-8. Sentiment / 방향성 표시
+7. 100-case human validation
+8. Sentiment / direction indicator
 
 ---
 
-*"이 제품의 첫 버전은 regulation-to-exposure mapping 시스템이어야 하며, 법률 이벤트를 entity type과 industry를 거쳐 ETF proxy에 정직하게 연결하고, 시장 데이터는 이후 context layer로 추가하며, historical replay로 매핑 정확도를 검증한다."*
+*"The first version of this product is a regulation-to-exposure mapping system that honestly connects legal events to ETF proxies through entity types and industries, adds market data only later as a context layer, and verifies mapping accuracy via historical replay."*
