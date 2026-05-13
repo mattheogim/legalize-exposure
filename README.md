@@ -1,5 +1,7 @@
 # Legalize
 
+[![Live docs](https://img.shields.io/badge/docs-legalize--exposure.vercel.app-black?style=flat-square)](https://legalize-exposure.vercel.app)
+
 **Regulation-to-Exposure Mapping Platform**
 
 Law/regulation changes → industry mapping → ETF exposure tracking. Not a market predictor — a regulation-event browser plus a market-context viewer.
